@@ -1,0 +1,10 @@
+
+
+#Ignore cursor AI rules
+.cursor\rules\codacy.mdc
+
+# Dependencies and generated files
+node_modules/
+.DS_Store
+dist/
+build/

@@ -1,0 +1,7 @@
+---
+description: Project quality rules
+globs:
+alwaysApply: false
+---
+
+Keep the static website accessible, responsive, fast loading, SEO optimized, and ready for shurvatech.com deployment.
