@@ -1,6 +1,12 @@
 {
   "permissions": {
-    "allow": [],
+    "allow": [
+      "Bash(curl -s -A \"Mozilla/5.0\" https://html-demo.themetechmount.com/altech/demo3/index.html -o /tmp/ref_index.html)",
+      "Bash(python -c ' *)",
+      "Bash(grep -n '/\\\\* about \\\\*/\\\\|\\\\.values {\\\\|\\\\.stat-row {' \"c:\\\\Users\\\\ShubhamPatil\\\\Desktop\\\\Shubham\\\\Project\\\\ShurvaTech\\\\assets\\\\css\\\\style.css\")",
+      "Bash(grep -n '/\\\\* founder \\\\*/' \"c:\\\\Users\\\\ShubhamPatil\\\\Desktop\\\\Shubham\\\\Project\\\\ShurvaTech\\\\assets\\\\css\\\\style.css\")",
+      "Bash(grep -n '/\\\\* page hero \\\\*/\\\\|\\\\.page-hero {' \"c:\\\\Users\\\\ShubhamPatil\\\\Desktop\\\\Shubham\\\\Project\\\\ShurvaTech\\\\assets\\\\css\\\\style.css\")"
+    ],
     "deny": []
   }
 }
