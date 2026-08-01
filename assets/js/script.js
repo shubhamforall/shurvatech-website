@@ -1,9 +1,11 @@
 document.documentElement.classList.add('js');
 
-const page = window.location.pathname.split('/').pop() || 'index.html';
+const path = window.location.pathname;
+const page = path === '/' ? '/' : (path.split('/').pop() || '/');
 
 document.querySelectorAll('[data-nav-link]').forEach((link) => {
-  if (link.getAttribute('href') === page) link.setAttribute('aria-current', 'page');
+  const href = link.getAttribute('href');
+  if (href === page || (href === '/' && page === 'index.html')) link.setAttribute('aria-current', 'page');
 });
 
 const menuButton = document.querySelector('[data-menu-button]');

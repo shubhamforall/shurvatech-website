@@ -1,0 +1,18 @@
+{
+  "name": "ShurvaTech",
+  "short_name": "ShurvaTech",
+  "description": "Software engineering for websites, custom software, AI automation, APIs, SaaS, and cloud delivery.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#060810",
+  "theme_color": "#060810",
+  "icons": [
+    {
+      "src": "/assets/images/brand/shurvatech-favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
