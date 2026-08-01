@@ -84,7 +84,7 @@ h1, h2, h3, .display, .h1, .h2, .h3, .brand { font-family: "Kanit", "Poppins", s
 .mobile-menu .button { margin-top: 10px; color: #04101a; justify-content: center; }
 
 /* hero */
-.hero { padding: 140px 0 90px; overflow: hidden; }
+.hero { padding: 88px 0 90px; overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(360px,.95fr); align-items: center; gap: 80px; }
 .hero-actions, .button-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
 .hero-note { margin-top: 24px; color: var(--muted); font-size: .88rem; }
@@ -234,7 +234,7 @@ h1, h2, h3, .display, .h1, .h2, .h3, .brand { font-family: "Kanit", "Poppins", s
 .cta-band .button:hover { box-shadow: 0 18px 44px rgba(0, 132, 251, .5); }
 
 /* page hero */
-.page-hero { padding: 118px 0 74px; border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
+.page-hero { padding: 76px 0 74px; border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
 .page-hero .lead { max-width: 650px; }
 .page-hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 60px; align-items: center; }
 .about-visual { position: relative; min-height: 340px; display: grid; place-items: center; animation: floatCard 7s ease-in-out infinite; }
@@ -318,12 +318,18 @@ h1, h2, h3, .display, .h1, .h2, .h3, .brand { font-family: "Kanit", "Poppins", s
 .field input, .field textarea, .field select { width: 100%; padding: 12px 15px; border: 1px solid var(--line); border-radius: 10px; color: var(--ink); background: var(--surface-2); transition: border-color .2s ease, box-shadow .2s ease; }
 .field textarea { min-height: 136px; resize: vertical; }
 .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--accent); outline: none; box-shadow: 0 0 0 4px rgba(0,186,253,.15); }
+.form-honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.form-status { min-height: 22px; margin: 16px 0 0; color: var(--muted); font-size: .9rem; font-weight: 500; }
+.form-status[data-state="success"] { color: #61d394; }
+.form-status[data-state="error"] { color: #ff8f8f; }
+.form-status[data-state="pending"] { color: var(--accent); }
+.form .button:disabled { cursor: wait; opacity: .72; transform: none !important; }
 .form .button { margin-top: 24px; }
 
 /* footer */
 .site-footer { position: relative; border-top: 1px solid var(--line); background: var(--bg-soft); overflow: hidden; }
 .site-footer::before { content: ''; position: absolute; top: -220px; left: 50%; transform: translateX(-50%); width: 700px; height: 300px; background: radial-gradient(ellipse, rgba(0,186,253,.14), transparent 70%); pointer-events: none; }
-.footer-main { position: relative; display: grid; grid-template-columns: 1.4fr repeat(3, .6fr); gap: 32px; padding: 64px 0 52px; }
+.footer-main { position: relative; display: grid; grid-template-columns: 1.4fr repeat(2, .6fr); gap: 32px; padding: 64px 0 52px; }
 .footer-brand p { max-width: 290px; margin: 15px 0 0; color: var(--muted); font-size: .9rem; }
 .footer-title { margin: 0 0 14px; font-size: .82rem; font-weight: 650; color: var(--ink); text-transform: uppercase; letter-spacing: .04em; }
 .footer-links { display: grid; gap: 10px; color: var(--muted); font-size: .9rem; }
@@ -353,7 +359,7 @@ h1, h2, h3, .display, .h1, .h2, .h3, .brand { font-family: "Kanit", "Poppins", s
 @media (max-width: 880px) {
   .nav-links { display: none; }
   .menu-button { display: grid; place-items: center; }
-  .hero { padding: 96px 0 60px; }
+  .hero { padding: 72px 0 60px; }
   .hero-grid,.split,.contact-layout,.founder-card,.page-hero-grid { grid-template-columns: 1fr; gap: 32px; }
   .about-visual { min-height: 220px; }
   .founder-card { padding: 30px; text-align: center; }
@@ -367,7 +373,7 @@ h1, h2, h3, .display, .h1, .h2, .h3, .brand { font-family: "Kanit", "Poppins", s
   .process { grid-template-columns: repeat(2,1fr); }
   .process::before { display: none; }
   .industries { grid-template-columns: repeat(3,1fr); }
-  .footer-main { grid-template-columns: 1.2fr 1fr 1fr; }
+  .footer-main { grid-template-columns: repeat(2, 1fr); }
   .footer-brand { grid-column: 1 / -1; }
 }
 @media (max-width: 580px) {
@@ -395,6 +401,6 @@ h1, h2, h3, .display, .h1, .h2, .h3, .brand { font-family: "Kanit", "Poppins", s
   .footer-main { grid-template-columns: 1fr 1fr; }
   .footer-brand { grid-column: 1 / -1; }
   .footer-bottom p + p { margin-top: 8px; }
-  .page-hero { padding: 80px 0 56px; }
+  .page-hero { padding: 64px 0 56px; }
   .form { padding: 22px; }
 }

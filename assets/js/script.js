@@ -31,6 +31,51 @@ document.querySelectorAll('[data-reveal]').forEach((item) => revealObserver.obse
 
 document.querySelectorAll('[data-year]').forEach((item) => { item.textContent = new Date().getFullYear(); });
 
+document.querySelectorAll('[data-contact-form]').forEach((form) => {
+  const status = form.querySelector('[data-form-status]');
+  const submitButton = form.querySelector('button[type="submit"]');
+  const defaultButtonText = submitButton ? submitButton.innerHTML : '';
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (status) {
+      status.textContent = 'Sending your enquiry...';
+      status.dataset.state = 'pending';
+    }
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.innerHTML = 'Sending <span>&#8594;</span>';
+    }
+
+    try {
+      const response = await fetch(form.dataset.submitEndpoint || form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+
+      if (!response.ok) throw new Error('Form submission failed');
+
+      form.reset();
+      if (status) {
+        status.textContent = 'Thank you. Your enquiry has been sent.';
+        status.dataset.state = 'success';
+      }
+    } catch (error) {
+      if (status) {
+        status.textContent = 'Unable to send right now. Please email shurvatech@gmail.com directly.';
+        status.dataset.state = 'error';
+      }
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.innerHTML = defaultButtonText;
+      }
+    }
+  });
+});
+
 const header = document.querySelector('.site-header');
 if (header) {
   const setScrolled = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
