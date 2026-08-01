@@ -144,17 +144,9 @@ h1, h2, h3, .display, .h1, .h2, .h3, .brand { font-family: "Kanit", "Poppins", s
 .service:hover { transform: translateY(-6px); border-color: rgba(0,186,253,.4); box-shadow: 0 24px 50px rgba(0,0,0,.4); }
 .service:hover::before { opacity: 1; }
 .service-index { position: absolute; top: 22px; right: 24px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; font-family: "Kanit", sans-serif; font-size: .7rem; font-weight: 600; color: var(--muted-soft); letter-spacing: .05em; }
-.service-icon { position: relative; display: grid; place-items: center; width: 54px; height: 54px; margin-bottom: 26px; border-radius: 15px; background: var(--grad); color: #04101a; box-shadow: 0 12px 28px rgba(0,132,251,.32), inset 0 1px 0 rgba(255,255,255,.25); transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
-.service:hover .service-icon { transform: rotate(-6deg) scale(1.08); box-shadow: 0 16px 36px rgba(0,132,251,.48), inset 0 1px 0 rgba(255,255,255,.3); }
-.service-icon svg { width: 24px; height: 24px; stroke: #04101a; stroke-width: 2; fill: none; }
-.service:nth-child(2) .service-icon { filter: hue-rotate(-14deg); }
-.service:nth-child(3) .service-icon { filter: hue-rotate(22deg); }
-.service:nth-child(4) .service-icon { filter: hue-rotate(-28deg); }
-.service:nth-child(5) .service-icon { filter: hue-rotate(38deg); }
-.service:nth-child(6) .service-icon { filter: hue-rotate(-42deg); }
-.service:nth-child(7) .service-icon { filter: hue-rotate(50deg); }
-.service:nth-child(8) .service-icon { filter: hue-rotate(-56deg); }
-.service:nth-child(9) .service-icon { filter: hue-rotate(64deg); }
+.service-icon { position: relative; display: grid; place-items: center; width: 30px; height: 30px; margin-bottom: 26px; color: var(--accent); transition: transform .25s var(--ease), color .25s ease; }
+.service:hover .service-icon { transform: translateY(-2px); color: #65d7ff; }
+.service-icon svg { width: 27px; height: 27px; stroke: currentColor; stroke-width: 1.7; fill: none; }
 .service h3 { position: relative; }
 .service p { position: relative; margin: 0; color: var(--muted); font-size: .94rem; }
 .service-more { position: relative; display: inline-flex; align-items: center; gap: 6px; margin-top: 20px; color: var(--accent); font-size: .84rem; font-weight: 600; opacity: 0; transform: translateX(-4px); transition: opacity .25s ease, transform .25s ease; }
@@ -162,6 +154,7 @@ h1, h2, h3, .display, .h1, .h2, .h3, .brand { font-family: "Kanit", "Poppins", s
 
 /* split / checklist */
 .split { display: grid; grid-template-columns: .95fr 1.05fr; gap: 96px; align-items: start; }
+.split .lead + .button { margin-top: 24px; }
 .checklist { display: grid; gap: 20px; padding: 0; margin: 0; list-style: none; }
 .checklist li { display: flex; gap: 14px; color: var(--muted); }
 .check { display: grid; flex: 0 0 auto; place-items: center; width: 26px; height: 26px; margin-top: 2px; border-radius: 50%; background: var(--mint); border: 1px solid rgba(0,186,253,.3); color: var(--accent); font-size: .78rem; font-weight: 700; }
@@ -173,14 +166,11 @@ h1, h2, h3, .display, .h1, .h2, .h3, .brand { font-family: "Kanit", "Poppins", s
 .process-item::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--grad); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
 .process-item:hover::before { transform: scaleX(1); }
 .process-item:hover { border-color: rgba(0,186,253,.4); transform: translateY(-6px); box-shadow: 0 24px 50px rgba(0,0,0,.4); }
-.process-icon { position: relative; z-index: 1; display: grid; place-items: center; width: 46px; height: 46px; margin-bottom: 22px; border-radius: 13px; background: var(--grad); color: #04101a; box-shadow: 0 12px 26px rgba(0,132,251,.32), inset 0 1px 0 rgba(255,255,255,.25); transition: transform .35s var(--ease); }
-.process-item:hover .process-icon { transform: rotate(-6deg) scale(1.08); }
-.process-icon svg { width: 21px; height: 21px; stroke: #04101a; stroke-width: 1.75; fill: none; }
+.process-icon { position: relative; z-index: 1; display: grid; place-items: center; width: 30px; height: 30px; margin-bottom: 22px; color: var(--accent); transition: transform .25s var(--ease), color .25s ease; }
+.process-item:hover .process-icon { transform: translateY(-2px); color: #65d7ff; }
+.process-icon svg { width: 27px; height: 27px; stroke: currentColor; stroke-width: 1.7; fill: none; }
 .process-number { display: block; margin-bottom: 10px; font-family: "Kanit", sans-serif; color: var(--accent); font-size: .8rem; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; }
 .process p { margin: 0; color: var(--muted); font-size: .92rem; }
-.process-item:nth-child(2) .process-icon { filter: hue-rotate(-16deg); }
-.process-item:nth-child(3) .process-icon { filter: hue-rotate(24deg); }
-.process-item:nth-child(4) .process-icon { filter: hue-rotate(-32deg); }
 
 /* portfolio */
 .project-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 26px; }
@@ -210,7 +200,7 @@ h1, h2, h3, .display, .h1, .h2, .h3, .brand { font-family: "Kanit", "Poppins", s
 .tech-cloud { display: flex; flex-wrap: wrap; gap: 12px; }
 .tech { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px 10px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); font-size: .9rem; font-weight: 550; transition: border-color .25s ease, transform .25s var(--ease), box-shadow .25s ease; }
 .tech:hover { border-color: rgba(0,186,253,.5); transform: translateY(-3px); box-shadow: 0 12px 26px rgba(0,186,253,.14); }
-.tech-mark { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 8px; background: var(--grad); color: #04101a; font-family: "Kanit", sans-serif; font-size: .68rem; font-weight: 700; }
+.tech-mark { display: grid; place-items: center; width: 26px; height: 26px; border: 1px solid rgba(0,186,253,.42); border-radius: 50%; color: var(--accent); font-family: "Kanit", sans-serif; font-size: .68rem; font-weight: 700; }
 
 /* industries */
 .industries { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
@@ -254,11 +244,8 @@ h1, h2, h3, .display, .h1, .h2, .h3, .brand { font-family: "Kanit", "Poppins", s
 
 /* services hero visual: floating icon mosaic */
 .mini-tile-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
-.mini-tile { display: grid; place-items: center; width: 88px; height: 88px; border-radius: 22px; background: var(--grad); box-shadow: 0 20px 44px rgba(0,132,251,.3), inset 0 1px 0 rgba(255,255,255,.25); transform: rotate(var(--r, 0deg)); animation: floatChip 5s ease-in-out infinite; animation-delay: var(--d, 0s); }
-.mini-tile svg { width: 32px; height: 32px; stroke: #04101a; stroke-width: 1.75; fill: none; }
-.mini-tile:nth-child(2) { filter: hue-rotate(-18deg); }
-.mini-tile:nth-child(3) { filter: hue-rotate(24deg); }
-.mini-tile:nth-child(4) { filter: hue-rotate(-36deg); }
+.mini-tile { display: grid; place-items: center; width: 72px; height: 72px; border: 1px solid rgba(0,186,253,.38); border-radius: 50%; background: rgba(0,186,253,.04); color: var(--accent); transform: rotate(var(--r, 0deg)); animation: floatChip 5s ease-in-out infinite; animation-delay: var(--d, 0s); }
+.mini-tile svg { width: 28px; height: 28px; stroke: currentColor; stroke-width: 1.7; fill: none; }
 
 /* portfolio hero visual: fanned card stack */
 .fan-stack { position: relative; width: 220px; height: 240px; }
@@ -266,8 +253,8 @@ h1, h2, h3, .display, .h1, .h2, .h3, .brand { font-family: "Kanit", "Poppins", s
 .fan-card.f1 { transform: rotate(-11deg) translate(-46px, 6px); z-index: 1; opacity: .75; }
 .fan-card.f2 { transform: rotate(6deg) translate(30px, 2px); z-index: 2; opacity: .88; }
 .fan-card.f3 { transform: rotate(-2deg); z-index: 3; animation: floatCard 6s ease-in-out infinite; }
-.fan-card.f3 .fan-icon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 16px; background: var(--grad); box-shadow: 0 14px 30px rgba(0,132,251,.35); }
-.fan-card.f3 .fan-icon svg { width: 24px; height: 24px; stroke: #04101a; stroke-width: 2; fill: none; }
+.fan-card.f3 .fan-icon { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid rgba(0,186,253,.42); border-radius: 50%; color: var(--accent); }
+.fan-card.f3 .fan-icon svg { width: 25px; height: 25px; stroke: currentColor; stroke-width: 1.7; fill: none; }
 
 /* contact hero visual: chat mockup */
 .chat-panel { width: 300px; padding: 22px; border-radius: 20px; border: 1px solid var(--line); background: linear-gradient(160deg, var(--surface), var(--bg-soft)); box-shadow: 0 30px 70px rgba(0,0,0,.45); animation: floatCard 7s ease-in-out infinite; }
