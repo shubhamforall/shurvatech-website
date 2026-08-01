@@ -1,3 +1,5 @@
+document.documentElement.classList.add('js');
+
 const page = window.location.pathname.split('/').pop() || 'index.html';
 
 document.querySelectorAll('[data-nav-link]').forEach((link) => {
