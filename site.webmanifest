@@ -9,9 +9,9 @@
   "theme_color": "#060810",
   "icons": [
     {
-      "src": "/assets/images/brand/shurvatech-favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/assets/images/brand/shurvatech-arrow-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]

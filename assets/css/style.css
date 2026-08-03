@@ -60,7 +60,7 @@ h1, h2, h3, .display, .h1, .h2, .h3, .brand { font-family: "Kanit", "Poppins", s
 .nav { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: inline-flex; align-items: center; color: var(--ink); transition: opacity .2s ease; }
 .brand:hover { opacity: .85; }
-.brand .brand-logo { width: auto; height: 38px; max-width: min(236px, 42vw); filter: drop-shadow(0 0 10px rgba(0,186,253,.22)); object-fit: contain; }
+.brand .brand-logo { width: min(236px, 42vw); height: auto; max-height: 52px; filter: drop-shadow(0 0 10px rgba(0,186,253,.22)); object-fit: contain; }
 .nav-links { display: flex; align-items: center; gap: 28px; color: var(--muted); font-size: .92rem; font-weight: 500; }
 .nav-links a:not(.button) { position: relative; padding: 4px 0; transition: color .2s ease; }
 .nav-links a:not(.button)::after { content: ''; position: absolute; left: 0; right: 100%; bottom: 0; height: 2px; background: var(--grad); border-radius: 2px; transition: right .28s var(--ease); }
@@ -81,7 +81,8 @@ h1, h2, h3, .display, .h1, .h2, .h3, .brand { font-family: "Kanit", "Poppins", s
 .mobile-menu { border-top: 1px solid var(--line-soft); background: var(--bg-soft); }
 .mobile-menu-inner { padding: 16px 0 20px; display: grid; gap: 4px; }
 .mobile-menu a { padding: 11px 0; font-weight: 500; color: var(--muted); }
-.mobile-menu .button { margin-top: 10px; color: #04101a; justify-content: center; }
+.mobile-menu .button { margin-top: 10px; justify-content: center; border-color: transparent; background: var(--grad); color: #04101a; box-shadow: 0 10px 24px rgba(0,132,251,.22); }
+.mobile-menu .button:hover { background: var(--grad); color: #04101a; }
 
 /* hero */
 .hero { padding: 88px 0 90px; overflow: hidden; }
